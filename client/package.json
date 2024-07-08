@@ -1,8 +1,8 @@
 {
-  "homepage": "https://pabmanase.github.io/birthday-board/",
-  "name": "jobarouter",
+  "homepage": "https://birthdayboard.vercel.app/",
+  "name": "birthdayboard",
   "version": "0.1.0",
-  "proxy": "http://localhost:5000",
+  "proxy": "https://birthday-board-server.vercel.app/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
