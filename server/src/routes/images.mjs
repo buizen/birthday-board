@@ -44,6 +44,8 @@ const upload = multer({
 const router = Router();
 
 router.get('/api/posts', (request, response) => {
+      console.log("HEY");
+      console.log(__dirname);
       //read the name.json file
       fs.readFile('src/utils/data/name.json','utf8', function readFileCallback(err, data){
       if (err){
