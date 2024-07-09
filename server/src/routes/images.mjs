@@ -9,9 +9,11 @@ import { dirname } from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+
+var uploadPath = path.join(__dirname, '../utils/uploads')
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, 'src/utils/uploads');
+      cb(null, uploadPath);
     },
     filename: function (req, file, cb) {
       const uniquePrefix = Date.now() + '-' + Math.round(Math.random()* 1E9);
