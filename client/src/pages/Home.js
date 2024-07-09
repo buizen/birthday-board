@@ -11,7 +11,7 @@ export default function Home() {
     .then(res => {
       console.log(res.data.obj.table);
       for (let i = 0; i < res.data.obj.table.length; i++) {
-        res.data.obj.table[i].filename = 'api/images/' + res.data.obj.table[i].filename;
+        res.data.obj.table[i].filename = 'https://birthday-board-server.vercel.app/api/images/' + res.data.obj.table[i].filename;
       };
       setPosts(res.data.obj.table);
     }).catch(err=> {
