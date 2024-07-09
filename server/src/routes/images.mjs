@@ -45,7 +45,7 @@ const router = Router();
 
 router.get('/api/posts', (request, response) => {
       console.log("HEY");
-      console.log(__dirname);
+      //console.log(__dirname);
       //read the name.json file
       //fs.readFile('src/utils/data/name.json','utf8', function readFileCallback(err, data){
       //if (err){
@@ -55,6 +55,7 @@ router.get('/api/posts', (request, response) => {
         var obj = {
           table: []
         };
+        response.status(201).send({ msg: "Testing... "});
         //obj = JSON.parse(data); //now it an object
         //response.status(201).send({ obj });
       });
