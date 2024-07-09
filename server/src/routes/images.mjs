@@ -46,22 +46,23 @@ const router = Router();
 router.get('/api/posts', (request, response) => {
       console.log("HEY");
       console.log(__dirname);
+      var x = path.join(__dirname, '../utils/data/name.json')
       //read the name.json file
-      //fs.readFile('src/utils/data/name.json','utf8', function readFileCallback(err, data){
-      //if (err){
-      //  console.log(err); 
-      //} else {  
+      fs.readFile(x,'utf8', function readFileCallback(err, data){
+      if (err){
+        console.log(err); 
+      } else {  
       
         var obj = {
           table: []
         };
-        response.status(201).send({ msg: "Testing... "});
-        //obj = JSON.parse(data); //now it an object
-        //response.status(201).send({ obj });
-      });
-    //}
+        //response.status(201).send({ msg: "Testing... "});
+        obj = JSON.parse(data); //now it an object
+        response.status(201).send({ obj });
       
-    //)});
+    }}
+      
+    )});
 
 router.get('/api/images/:id', (req, res) => {
   //console.log(req.params);
