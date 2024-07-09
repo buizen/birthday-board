@@ -2,6 +2,7 @@ import express from 'express';
 import routes from "./routes/indexRouter.mjs";
 
 const app = express();
+const cors = require("cors");
 app.use(cors({
     origin: "https://birthdayboard.vercel.app/",
 }));
