@@ -7,7 +7,7 @@ export default function Home() {
   const [posts, setPosts] = useState([]);
 
   const getPosts = () => {
-    axios.get('api/posts')
+    axios.get('https://birthday-board-server.vercel.app/api/posts')
     .then(res => {
       console.log(res.data.obj.table);
       for (let i = 0; i < res.data.obj.table.length; i++) {
