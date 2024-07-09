@@ -44,8 +44,6 @@ const upload = multer({
 const router = Router();
 
 router.get('/api/posts', (request, response) => {
-      console.log("HEY");
-      console.log(__dirname);
       var x = path.join(__dirname, '../utils/data/name.json')
       //read the name.json file
       fs.readFile(x,'utf8', function readFileCallback(err, data){
@@ -56,7 +54,6 @@ router.get('/api/posts', (request, response) => {
         var obj = {
           table: []
         };
-        //response.status(201).send({ msg: "Testing... "});
         obj = JSON.parse(data); //now it an object
         response.status(201).send({ obj });
       
@@ -89,7 +86,8 @@ router.get('/api/images/:id', (req, res) => {
 var fs = require('fs');
 router.post('/api/uploadFile', upload.single('avatar'), (req, res) => {
     //read the name.json file
-    fs.readFile('src/utils/data/name.json','utf8', function readFileCallback(err, data){
+    var x = path.join(__dirname, '../utils/data/name.json');
+    fs.readFile(x,'utf8', function readFileCallback(err, data){
       if (err){
         console.log(err); 
     } else {
@@ -111,7 +109,7 @@ router.post('/api/uploadFile', upload.single('avatar'), (req, res) => {
       }
       obj.table.push({id: nextId, name: nameData, message: messageData, filename: fileName}); //add some data
       var json = JSON.stringify(obj); //convert it back to json
-      fs.writeFile("src/utils/data/name.json", json, function(err) {
+      fs.writeFile(x, json, function(err) {
               if (err) throw err;
                 console.log('complete'); // write it back 
               })
