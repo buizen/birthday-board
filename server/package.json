@@ -5,8 +5,7 @@
   "main": "index.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./src/index.mjs",
-    "vercel-build": "echo hello"
+    "start": "nodemon ./src/index.mjs"
   },
   "keywords": [],
   "author": "",
