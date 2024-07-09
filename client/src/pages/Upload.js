@@ -25,6 +25,9 @@ export default function Upload() {
           <br></br>
           <button type="submit" >Upload</button>
         </form>
+        
+
       </div>
+      
     )
   }

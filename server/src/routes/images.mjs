@@ -43,10 +43,6 @@ const upload = multer({
   
 const router = Router();
 
-router.get('/api/test', (req, res) => {
-  res.status(201).send({ msg: "Test complete "});
-})
-
 router.get('/api/posts', (request, response) => {
       //read the name.json file
       fs.readFile('src/utils/data/name.json','utf8', function readFileCallback(err, data){
