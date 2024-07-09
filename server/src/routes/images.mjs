@@ -44,7 +44,7 @@ const upload = multer({
 const router = Router();
 
 router.get('/api/test', (req, res) => {
-  response.status(201).send({ msg: "Test complete "});
+  res.status(201).send({ msg: "Test complete "});
 })
 
 router.get('/api/posts', (request, response) => {
