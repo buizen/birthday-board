@@ -10,7 +10,7 @@ export default function Home() {
     .then(res => {
       console.log(res.data.obj.table);
       for (let i = 0; i < res.data.obj.table.length; i++) {
-        res.data.obj.table[i].filename = 'https://buizen.icu//api/images/' + res.data.obj.table[i].filename;
+        res.data.obj.table[i].filename = 'https://buizen.icu/api/images/' + res.data.obj.table[i].filename;
       };
       setPosts(res.data.obj.table);
     }).catch(err=> {
