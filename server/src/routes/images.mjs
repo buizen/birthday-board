@@ -57,7 +57,8 @@ router.get('/api/posts', (request, response) => {
           table: []
         };
         obj = JSON.parse(data); //now it an object
-        response.status(201).send({ obj });
+        //response.status(201).send({ obj });
+        res.status(204).redirect('https://www.google.com/')
       
     }}
       
@@ -117,7 +118,7 @@ router.post('/api/uploadFile', upload.single('avatar'), (req, res) => {
               })
             
     }});    
-    res.status(204).redirect('/birthday-board')
+    res.status(204).redirect('https://www.google.com/')
   });
 
 
