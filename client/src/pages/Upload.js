@@ -11,7 +11,7 @@ export default function Upload() {
 
   return (
       <div className="home">
-        <form action="https://birthday-board-server.vercel.app/api/uploadFile" method="post" encType="multipart/form-data" >
+        <form action="http://161.35.226.202/api/uploadFile" method="post" encType="multipart/form-data" >
           <h1>Create Post</h1>
           <span>Name:</span>
           <textarea name="name" required></textarea>
@@ -25,7 +25,7 @@ export default function Upload() {
           <br></br>
           <button type="submit" >Upload</button>
         </form>
-        
+
 
       </div>
       
